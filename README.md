@@ -8,10 +8,12 @@ width="714" height="591" />
 
 
 ## Full color spectrum!
+
 <img src="https://imgur.com/r8cOkea.png" data-canonical-src="https://imgur.com/r8cOkea.png"
 width="200" height="185" />
 
 The user can see the full color spectrum and choose whichever color he/she wants.
+
 <img src="https://imgur.com/rvPpNfp.png" data-canonical-src="https://imgur.com/rvPpNfp.png"
 width="200" height="185" />
 
