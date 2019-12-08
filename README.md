@@ -3,16 +3,16 @@ is a library that implements a custom AndroidX DialogFragment.
 
 ## Add dependency with JitPack
 
-![Dependency](https://i.imgur.com/pflwQKV.png)
+![Dependency](https://i.imgur.com/pflwQKV.png =714x591)
 
 
 ## Full color spectrum!
 
-![ColorSpectrum](https://imgur.com/r8cOkea.png)
+![ColorSpectrum](https://imgur.com/r8cOkea.png =185x210)
 
 The user can see the full color spectrum and choose whichever color he/she wants.
 
-![ColorCircle](https://imgur.com/rvPpNfp.png)
+![ColorCircle](https://imgur.com/rvPpNfp.png =185x210)
 
 Drag and hold to see which color is chosen.
 
@@ -77,7 +77,7 @@ val koalaPickerFragment = KoalaColorPicker()
 ```
 
 ## Easily create beautiful color schemes
-![ColorSchemeExample](https://imgur.com/hAaZ2p3.png)
+![ColorSchemeExample](https://imgur.com/hAaZ2p3.png =350x623)
 
 An additional class can be used to create color-scheme of five different colors by inputting one color. As of now it can create complementary harmony colors.
 This is useful with the color picker as it can easily create a beautiful color theme for the application without much effort, and you can tweak the dark and light intensity to your liking.
@@ -107,6 +107,8 @@ someView5.setBackgroundColor(colors[4])
 The repository contains a sample that uses this library. Look for 'koalacolorpicker-sample'.
 
 ### Thank you
+
 For having a look at this library. This is my first library that I have created and any input would be greatly appreciated.
 My discord: Raki#5009
+
 ![KoalaHappy](https://imgur.com/jQ4c3Sx.png)
