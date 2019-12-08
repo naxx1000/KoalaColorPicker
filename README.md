@@ -109,6 +109,7 @@ The repository contains a sample that uses this library. Look for 'koalacolorpic
 ### Thank you
 
 For having a look at this library. This is my first library that I have created and any input would be greatly appreciated.
+
 My discord: Raki#5009
 
 ![KoalaHappy](https://imgur.com/jQ4c3Sx.png)
