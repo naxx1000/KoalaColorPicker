@@ -1,12 +1,12 @@
 # KoalaColorPicker
 is a library that implements a custom AndroidX DialogFragment.
 
-#Add dependency with JitPack
+## Add dependency with JitPack
 
 ![Dependency](https://i.imgur.com/pflwQKV.png)
 
 
-##Full color spectrum!
+## Full color spectrum!
 
 ![ColorSpectrum](https://imgur.com/r8cOkea.png)
 
@@ -76,7 +76,7 @@ val koalaPickerFragment = KoalaColorPicker()
 	.setCursorPosition(cursorPos)
 ```
 
-##Easily create beautiful color schemes
+## Easily create beautiful color schemes
 ![ColorSchemeExample](https://imgur.com/hAaZ2p3.png)
 
 An additional class can be used to create color-scheme of five different colors by inputting one color. As of now it can create complementary harmony colors.
@@ -85,7 +85,7 @@ This is useful with the color picker as it can easily create a beautiful color t
 The above figure shows an example of a color scheme when the user has chosen red as the color and he/she uses light mode.
 
 
-### How to retrieve the complementary harmony color scheme
+## How to retrieve the complementary harmony color scheme
 
 Input a color into the .complementary function, which returns a IntArray of size five with the new colors.
 
@@ -101,6 +101,10 @@ someView3.setBackgroundColor(colors[2])
 someView4.setBackgroundColor(colors[3])
 someView5.setBackgroundColor(colors[4])
 ```
+
+## Sample
+
+The repository contains a sample that uses this library. Look for 'koalacolorpicker-sample'.
 
 ### Thank you
 For having a look at this library. This is my first library that I have created and any input would be greatly appreciated.
