@@ -2,14 +2,18 @@
 is a library that implements a custom AndroidX DialogFragment.
 
 ##Add dependency with JitPack
+
 ![Dependency](https://i.imgur.com/pflwQKV.png)
 
 
 ##Full color spectrum!
+
 ![ColorSpectrum](https://imgur.com/r8cOkea.png)
+
 The user can see the full color spectrum and choose whichever color he/she wants.
 
 ![ColorCircle](https://imgur.com/rvPpNfp.png)
+
 Drag and hold to see which color is chosen.
 
 
