@@ -3,16 +3,16 @@ is a library that implements a custom AndroidX DialogFragment.
 
 ## Add dependency with JitPack
 
-<img data-canonical-src="https://i.imgur.com/pflwQKV.png"
+<img src="https://i.imgur.com/pflwQKV.png" data-canonical-src="https://i.imgur.com/pflwQKV.png"
 width="714" height="591" />
 
 
 ## Full color spectrum!
-<img data-canonical-src="https://imgur.com/r8cOkea.png"
+<img src="https://imgur.com/r8cOkea.png" data-canonical-src="https://imgur.com/r8cOkea.png"
 width="200" height="185" />
 
 The user can see the full color spectrum and choose whichever color he/she wants.
-<img data-canonical-src="https://imgur.com/rvPpNfp.png"
+<img src="https://imgur.com/rvPpNfp.png" data-canonical-src="https://imgur.com/rvPpNfp.png"
 width="200" height="185" />
 
 Drag and hold to see which color is chosen.
@@ -79,7 +79,7 @@ val koalaPickerFragment = KoalaColorPicker()
 
 ## Easily create beautiful color schemes
 
-<img data-canonical-src="https://imgur.com/hAaZ2p3.png"
+<img src="https://imgur.com/hAaZ2p3.png" data-canonical-src="https://imgur.com/hAaZ2p3.png"
 width="350" height="623" />
 
 An additional class can be used to create color-scheme of five different colors by inputting one color. As of now it can create complementary harmony colors.
@@ -115,5 +115,5 @@ For having a look at this library. This is my first library that I have created 
 
 My discord: Raki#5009
 
-<img data-canonical-src="https://imgur.com/jQ4c3Sx.png"
+<img src="https://imgur.com/jQ4c3Sx.png" data-canonical-src="https://imgur.com/jQ4c3Sx.png"
 width="209" height="185" />
