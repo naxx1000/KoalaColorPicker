@@ -4,7 +4,7 @@ is a library that implements a custom AndroidX DialogFragment.
 ## Add dependency with JitPack
 
 <img src="https://i.imgur.com/pflwQKV.png" data-canonical-src="https://i.imgur.com/pflwQKV.png"
-width="714" height="591" />
+width="400" height="331" />
 
 
 ## Full color spectrum!
