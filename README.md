@@ -82,7 +82,7 @@ val koalaPickerFragment = KoalaColorPicker()
 ## Easily create beautiful color schemes
 
 <img src="https://imgur.com/hAaZ2p3.png" data-canonical-src="https://imgur.com/hAaZ2p3.png"
-width="350" height="623" />
+width="280" height="498" />
 
 An additional class can be used to create color-scheme of five different colors by inputting one color. As of now it can create complementary harmony colors.
 This is useful with the color picker as it can easily create a beautiful color theme for the application without much effort, and you can tweak the dark and light intensity to your liking.
