@@ -38,22 +38,28 @@ class KoalaColorPicker : DialogFragment(){
     ): View? {
         val view: View = inflater.inflate(R.layout.color_picker_dialog_fragment, container, false)
 
+        //OnColorChosenListener which updates when the user ColorPickerView is created and when the
+        //user touches the ColorPickerView.
         view.colorPicker.setCursorPos(cursorPos).setOnColorChosenListener(object: ColorPickerView.OnColorChosenListener{
-            override fun onColorChoose(color: Int, cursorPosition: Int) {
+            override fun onColorChosen(color: Int, cursorPosition: Int) {
                 selectedColor = color
                 cursorPos = cursorPosition
                 listenerColorSelect?.onColorSelect(color)
             }
         })
 
+        //The dark mode switch's OnClickListener.
         view.switchDarkLight.setOnClickListener {
             listenerSwitchClick?.onSwitchClick(view.switchDarkLight.isChecked)
         }
 
+        //The dialog button's OnClickListener that accepts the chosen color by the user.
         view.buttonAccept.setOnClickListener {
             val option = hasDarkModeOption
             if(option != null){
                 if(option){
+                    //If dark mode is true; fire onAcceptColor function, with a dark mode color,
+                    //else send light mode color instead.
                     if(view.switchDarkLight.isChecked){
                         listenerColorAccept?.onAcceptColor(Color.rgb(
                             max(selectedColor.red - darkModeIntensity, 0),
@@ -71,11 +77,13 @@ class KoalaColorPicker : DialogFragment(){
                     listenerColorAccept?.onAcceptColor(selectedColor, cursorPos)
                 }
             }else{
+                //If the darkModeOption does not exist, use full colors.
                 listenerColorAccept?.onAcceptColor(selectedColor, cursorPos)
             }
-            dismiss()
+            dismiss() //Closes the dialog fragment
         }
 
+        //If the title text is null, hide the text view, otherwise show the title with text.
         if (title == null){
             view.tvTitle.visibility = View.GONE
         }else{
@@ -83,16 +91,19 @@ class KoalaColorPicker : DialogFragment(){
             view.tvTitle.text = title
         }
 
+        //Set the background of the fragment layout.
         val cb = colorBackground
         if(cb != null){
             view.dialogLayout.setBackgroundColor(cb)
         }
 
+        //Sets the text color of the fragment layout.
         val tc = textColor
         if(tc != null){
             view.tvTitle.setTextColor(tc)
         }
 
+        //Sets the color of the accept button of the fragment layout.
         val abc = acceptButtonColor
         if(abc != null){
             val shape = GradientDrawable()
@@ -101,6 +112,8 @@ class KoalaColorPicker : DialogFragment(){
             view.buttonAccept.background = shape
         }
 
+        //If the hasDarkModeOption is true, then the switch will be shown in the fragment.
+        // Otherwise it is hidden.
         val option = hasDarkModeOption
         if(option != null){
             if(option){
@@ -122,7 +135,7 @@ class KoalaColorPicker : DialogFragment(){
     }
 
     /**
-     * Factory Methods
+     * Factory Methods ----------------------------------------------
      */
 
     fun setLightModeIntensity(value: Int) : KoalaColorPicker{
@@ -176,7 +189,7 @@ class KoalaColorPicker : DialogFragment(){
     }
 
     /**
-     * Listeners
+     * Listeners ---------------------------------------------------
      */
 
     fun setOnColorSelectedListener(listener: OnColorSelectListener){

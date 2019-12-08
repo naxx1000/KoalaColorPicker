@@ -9,39 +9,49 @@ import kotlin.math.min
 
 class ColorToHarmonyColors {
 
+    val c2 = 45
+    val c3 = 50
+    val c4 = 25
+    val c5 = 120
+    val c5_d = 130
+
+    //If the user wants to get a complementary harmony color-scheme without using dark or light mode.
     fun complementary(color: Int) : IntArray{
         val colors = IntArray(5)
         colors[0] = color
-        colors[1] = Color.rgb(min(color.red + 45, 255), min(color.green + 45, 255), min(color.blue + 45, 255))
-        colors[2] = Color.rgb(max(color.red - 50, 0), max(color.green - 50, 0), max(color.blue - 50, 0))
+        colors[1] = Color.rgb(min(color.red + c2, 255), min(color.green + c2, 255), min(color.blue + c2, 255))
+        colors[2] = Color.rgb(max(color.red - c3, 0), max(color.green - c3, 0), max(color.blue - c3, 0))
         val comp = getComplementary(color)
-        colors[3] = Color.rgb(min(comp.red + 25, 255), min(comp.green + 25, 255), min(comp. blue + 25, 255))
-        colors[4] = Color.rgb(max(comp.red - 120, 0), max(comp.green - 120, 0), max(comp.blue - 120, 0))
+        colors[3] = Color.rgb(min(comp.red + c4, 255), min(comp.green + c4, 255), min(comp. blue + c4, 255))
+        colors[4] = Color.rgb(max(comp.red - c5, 0), max(comp.green - c5, 0), max(comp.blue - c5, 0))
 
         return colors
     }
 
+    //If the user wants to get a complementary harmony color-scheme and uses dark or light mode.
     fun complementary(color: Int, darkMode: Boolean?) : IntArray{
         val colors = IntArray(5)
         colors[0] = color
-        colors[1] = Color.rgb(min(color.red + 45, 255), min(color.green + 45, 255), min(color.blue + 45, 255))
-        colors[2] = Color.rgb(max(color.red - 50, 0), max(color.green - 50, 0), max(color.blue - 50, 0))
+        colors[1] = Color.rgb(min(color.red + c2, 255), min(color.green + c2, 255), min(color.blue + c2, 255))
+        colors[2] = Color.rgb(max(color.red - c3, 0), max(color.green - c3, 0), max(color.blue - c3, 0))
         val comp = getComplementary(color)
-        colors[3] = Color.rgb(min(comp.red + 25, 255), min(comp.green + 25, 255), min(comp. blue + 25, 255))
+        colors[3] = Color.rgb(min(comp.red + c4, 255), min(comp.green + c4, 255), min(comp. blue + c4, 255))
         val dm = darkMode
         if(dm != null){
             if(dm){
-                colors[4] = Color.rgb(min(comp.red + 130, 255), min(comp.green + 130, 255), min(comp.blue + 130, 255))
+                //Make this color brighter instead of darker, when in dark mode.
+                colors[4] = Color.rgb(min(comp.red + c5_d, 255), min(comp.green + c5_d, 255), min(comp.blue + c5_d, 255))
             }else{
-                colors[4] = Color.rgb(max(comp.red - 120, 0), max(comp.green - 120, 0), max(comp.blue - 120, 0))
+                colors[4] = Color.rgb(max(comp.red - c5, 0), max(comp.green - c5, 0), max(comp.blue - c5, 0))
             }
         }else{
-            colors[4] = Color.rgb(max(comp.red - 120, 0), max(comp.green - 120, 0), max(comp.blue - 120, 0))
+            colors[4] = Color.rgb(max(comp.red - c5, 0), max(comp.green - c5, 0), max(comp.blue - c5, 0))
         }
 
         return colors
     }
 
+    //Returns the complementary color of a given color.
     private fun getComplementary(color: Int) : Int{
         val r = color.red
         val g = color.green

@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
     fun setLayoutColors(color: Int, isDarkMode: Boolean?){
         val colorToHarmonyColors = ColorToHarmonyColors()
 
+        //Get a 5 colors color-scheme which includes complementary colors.
         val colors = colorToHarmonyColors.complementary(color, mIsDarkMode)
 
         view1.setBackgroundColor(colors[0])
