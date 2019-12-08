@@ -1,7 +1,7 @@
 # KoalaColorPicker
 is a library that implements a custom AndroidX DialogFragment.
 
-##Add dependency with JitPack
+#Add dependency with JitPack
 
 ![Dependency](https://i.imgur.com/pflwQKV.png)
 
