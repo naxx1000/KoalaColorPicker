@@ -17,6 +17,7 @@ class ColorToHarmonyColors {
     val c3 = 50
     val c3_d = 10
     val c4 = 25
+    val c4_d = 60
     val c5 = 120
     val c5_d = 130
 
@@ -37,22 +38,24 @@ class ColorToHarmonyColors {
     //If the user wants to get a complementary harmony color-scheme and uses dark or light mode.
     fun complementary(color: Int, darkMode: Boolean?) : IntArray{
         val colors = IntArray(5)
+        val comp = getComplementary(color)
+        val dm = darkMode
         colors[0] = color
         colors[1] = Color.rgb(min(color.red + c2, 255), min(color.green + c2, 255), min(color.blue + c2, 255))
-        val comp = getComplementary(color)
-        colors[3] = Color.rgb(min(comp.red + c4, 255), min(comp.green + c4, 255), min(comp. blue + c4, 255))
-        val dm = darkMode
         if(dm != null){
             if(dm){
                 //Make this color brighter instead of darker, when in dark mode.
                 colors[2] = Color.rgb(max(color.red - c3_d, 0), max(color.green - c3_d, 0), max(color.blue - c3_d, 0))
+                colors[3] = Color.rgb(min(comp.red + c4_d, 255), min(comp.green + c4_d, 255), min(comp. blue + c4_d, 255))
                 colors[4] = Color.rgb(min(comp.red + c5_d, 255), min(comp.green + c5_d, 255), min(comp.blue + c5_d, 255))
             }else{
                 colors[2] = Color.rgb(max(color.red - c3, 0), max(color.green - c3, 0), max(color.blue - c3, 0))
+                colors[3] = Color.rgb(min(comp.red + c4, 255), min(comp.green + c4, 255), min(comp. blue + c4, 255))
                 colors[4] = Color.rgb(max(comp.red - c5, 0), max(comp.green - c5, 0), max(comp.blue - c5, 0))
             }
         }else{
             colors[2] = Color.rgb(max(color.red - c3, 0), max(color.green - c3, 0), max(color.blue - c3, 0))
+            colors[3] = Color.rgb(min(comp.red + c4, 255), min(comp.green + c4, 255), min(comp. blue + c4, 255))
             colors[4] = Color.rgb(max(comp.red - c5, 0), max(comp.green - c5, 0), max(comp.blue - c5, 0))
         }
 
