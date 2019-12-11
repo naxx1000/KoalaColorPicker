@@ -16,7 +16,7 @@ class ColorToHarmonyColors {
     val c2 = 45
     val c3 = 50
     val c3_d = 10
-    val c4 = 25
+    val c4 = 15
     val c4_d = 60
     val c5 = 120
     val c5_d = 130
