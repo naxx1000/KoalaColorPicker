@@ -10,7 +10,7 @@ import kotlin.math.min
 class ColorToHarmonyColors {
 
     companion object {
-        lateinit var colorArray: IntArray
+        var colorArray: IntArray? = null
     }
 
     val c2 = 45
